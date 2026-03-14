@@ -1,0 +1,4 @@
+model_1,model_2,score_col_1,score_col_2,n_shared,pearson_corr,spearman_corr,note
+IF,LOF,,,0,,,score column missing in one or both files
+IF,OCSVM,,,0,,,score column missing in one or both files
+LOF,OCSVM,,,0,,,score column missing in one or both files
