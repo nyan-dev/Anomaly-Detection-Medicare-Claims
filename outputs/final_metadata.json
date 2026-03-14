@@ -1,0 +1,38 @@
+{
+  "project": "Unsupervised Anomaly Detection - Medicare Outpatient Claims 2010",
+  "version": "1.0",
+  "date_completed": "2026-02-07",
+  "random_seed": 42,
+  "phase1": {
+    "dataset_source": "Kaggle - CMS DE-SynPUF 2010 Outpatient",
+    "grain": "One row = one claim segment (CLM_ID + SEGMENT unique)",
+    "rows_original": 175005,
+    "rows_after_cleaning": 174418,
+    "features_engineered": 14,
+    "feature_categories": [
+      "monetary",
+      "temporal",
+      "coding",
+      "provider"
+    ]
+  },
+  "phase2": {
+    "train_test_split": "70/30",
+    "train_size": 122092,
+    "test_size": 52326,
+    "injection_rate": 0.03,
+    "anomalies_injected": 1569,
+    "models_trained": [
+      "Isolation Forest",
+      "LOF",
+      "One-Class SVM"
+    ],
+    "best_model": null,
+    "best_pr_auc": 0.817585934168674
+  },
+  "phase3": {
+    "case_files_generated": 40,
+    "top_anomalies": 30,
+    "normal_cases": 10
+  }
+}
